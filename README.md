@@ -1,5 +1,7 @@
 # MAX Bots Java
 
+[![JitPack](https://jitpack.io/v/kamoddd/maxbots-java.svg)](https://jitpack.io/#kamoddd/maxbots-java)
+
 `MAX Bots Java` is a modern Java library for building bots on top of the [MAX Bot API](https://dev.max.ru/docs-api).
 
 The project is intentionally layered:
@@ -47,6 +49,68 @@ The official MAX ecosystem already documents the HTTP API and provides Go/JavaSc
   <artifactId>maxbots-webhook</artifactId>
   <version>0.1.0-SNAPSHOT</version>
 </dependency>
+```
+
+## Install via JitPack
+
+JitPack builds are created from Git tags and served as Maven artifacts. JitPack's official docs say:
+- push a GitHub release/tag and JitPack will build it from source
+- for multi-module projects, use `com.github.User.Repo` as the group id and module artifact ids individually
+
+Sources:
+- [JitPack intro](https://docs.jitpack.io/)
+- [JitPack multi-module docs](https://docs.jitpack.io/building/)
+
+Add JitPack to Maven:
+
+```xml
+<repositories>
+  <repository>
+    <id>jitpack.io</id>
+    <url>https://jitpack.io</url>
+  </repository>
+</repositories>
+```
+
+Then depend on a released tag, for example `v0.1.0`.
+
+Maven:
+
+```xml
+<dependency>
+  <groupId>com.github.kamoddd.maxbots-java</groupId>
+  <artifactId>maxbots-api</artifactId>
+  <version>v0.1.0</version>
+</dependency>
+```
+
+```xml
+<dependency>
+  <groupId>com.github.kamoddd.maxbots-java</groupId>
+  <artifactId>maxbots-core</artifactId>
+  <version>v0.1.0</version>
+</dependency>
+```
+
+```xml
+<dependency>
+  <groupId>com.github.kamoddd.maxbots-java</groupId>
+  <artifactId>maxbots-webhook</artifactId>
+  <version>v0.1.0</version>
+</dependency>
+```
+
+Gradle:
+
+```groovy
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation 'com.github.kamoddd.maxbots-java:maxbots-core:v0.1.0'
+}
 ```
 
 ## Quick Start
