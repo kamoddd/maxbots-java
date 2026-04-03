@@ -21,6 +21,8 @@ The official MAX ecosystem already documents the HTTP API and provides Go/JavaSc
 
 ## Modules
 
+For local development from source the internal coordinates are:
+
 ### `maxbots-api`
 
 ```xml
@@ -72,7 +74,7 @@ Add JitPack to Maven:
 </repositories>
 ```
 
-Then depend on a released tag, for example `v0.1.0`.
+Then depend on a released tag, for example `v0.1.1`.
 
 Maven:
 
@@ -80,7 +82,7 @@ Maven:
 <dependency>
   <groupId>com.github.kamoddd.maxbots-java</groupId>
   <artifactId>maxbots-api</artifactId>
-  <version>v0.1.0</version>
+  <version>v0.1.1</version>
 </dependency>
 ```
 
@@ -88,7 +90,7 @@ Maven:
 <dependency>
   <groupId>com.github.kamoddd.maxbots-java</groupId>
   <artifactId>maxbots-core</artifactId>
-  <version>v0.1.0</version>
+  <version>v0.1.1</version>
 </dependency>
 ```
 
@@ -96,9 +98,14 @@ Maven:
 <dependency>
   <groupId>com.github.kamoddd.maxbots-java</groupId>
   <artifactId>maxbots-webhook</artifactId>
-  <version>v0.1.0</version>
+  <version>v0.1.1</version>
 </dependency>
 ```
+
+Direct artifact examples:
+
+- `https://jitpack.io/com/github/kamoddd/maxbots-java/maxbots-core/v0.1.1/maxbots-core-v0.1.1.jar`
+- `https://jitpack.io/com/github/kamoddd/maxbots-java/maxbots-core/v0.1.1/maxbots-core-v0.1.1.pom`
 
 Gradle:
 
@@ -109,7 +116,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.kamoddd.maxbots-java:maxbots-core:v0.1.0'
+    implementation 'com.github.kamoddd.maxbots-java:maxbots-core:v0.1.1'
 }
 ```
 
@@ -177,7 +184,7 @@ Run it from the project root:
 You can also run it directly from the example module:
 
 ```bash
-mvn -q -Dmaven.repo.local=.m2 -pl maxbots-examples -am package
+./mvnw -q -Dmaven.repo.local=.m2 -pl maxbots-examples -am package
 java -jar maxbots-examples/target/maxbots-examples-0.1.0-SNAPSHOT.jar
 ```
 
