@@ -1,0 +1,9 @@
+# Copy this file to bot.local.properties and put your real token there.
+# The local file is gitignored and must never be committed.
+max.bot.token=
+
+# Optional display values for the demo bot.
+max.bot.name=Kim Consulting Echo Bot
+
+# Set to true only when you want verbose debugging in console.
+max.bot.debug=false

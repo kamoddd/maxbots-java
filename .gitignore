@@ -1,0 +1,8 @@
+.DS_Store
+.idea/
+*.iml
+.m2/
+*/target/
+echo-bot.lock
+maxbots-examples/config/bot.properties
+maxbots-examples/config/bot.local.properties
